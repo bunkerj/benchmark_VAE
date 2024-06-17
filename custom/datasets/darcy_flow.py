@@ -88,4 +88,5 @@ class DarcyFlow(DownloadableDataset):
     def __getitem__(self, idx):
         u = self.data['u'][idx]
         # x = self.data['x']
-        return torch.tensor(u, dtype=torch.float) #, x
+        n = int(u.shape[1] ** 0.5)
+        return torch.tensor(u, dtype=torch.float).reshape(-1, 1, n, n) #, x

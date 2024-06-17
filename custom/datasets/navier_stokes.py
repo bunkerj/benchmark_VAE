@@ -14,7 +14,6 @@ from custom.datasets import (
 
 class NavierStokes(DownloadableDataset):
     '''The Navier--Stokes dataset for a viscous, incompressible fluid in two dimensions as used by Li et al.
-
     This dataset consists of initial conditions and trajectories for the Navier--Stokes
     equations for a viscous, incompressible fluid in two dimensions with periodic
     boundary conditions in velocity--vorticity form:
@@ -169,7 +168,4 @@ class NavierStokes(DownloadableDataset):
         u = self.u_data[idx]
         if self.transform is not None:
             u = self.transform(u)
-
-        # u_enc, x_enc, u_dec, x_dec = get_random_samples(u, self.x, self.ratio_rand_pts_enc)
-        # return u_enc, x_enc, u_dec, x_dec
-        return u.reshape(-1, 1)
+        return u.reshape(-1, 1, self.resolution, self.resolution)
