@@ -4,9 +4,9 @@ from copy import deepcopy
 import pytest
 import torch
 
-from pythae.customexception import ModelError
-from pythae.models import AE, RHVAE, VAE, AEConfig, RHVAEConfig, VAEConfig
-from pythae.trainers import BaseTrainer, BaseTrainerConfig
+from src.pythae.customexception import ModelError
+from src.pythae.models import AE, RHVAE, VAE, AEConfig, RHVAEConfig, VAEConfig
+from src.pythae.trainers import BaseTrainer, BaseTrainerConfig
 from tests.data.custom_architectures import *
 
 PATH = os.path.dirname(os.path.abspath(__file__))

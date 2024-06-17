@@ -5,9 +5,9 @@ import pip
 import pytest
 import torch
 
-from pythae.models import AE, VAE, AEConfig, VAEConfig
-from pythae.pipelines.generation import GenerationPipeline
-from pythae.samplers import NormalSampler, NormalSamplerConfig
+from src.pythae.models import AE, VAE, AEConfig, VAEConfig
+from src.pythae.pipelines.generation import GenerationPipeline
+from src.pythae.samplers import NormalSampler, NormalSamplerConfig
 
 PATH = os.path.dirname(os.path.abspath(__file__))
 

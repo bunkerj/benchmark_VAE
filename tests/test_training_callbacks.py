@@ -4,7 +4,7 @@ from collections import Counter
 import pytest
 import torch
 
-from pythae.models import (
+from src.pythae.models import (
     AE,
     RAE_L2,
     VAEGAN,
@@ -14,8 +14,8 @@ from pythae.models import (
     RAE_L2_Config,
     VAEGANConfig,
 )
-from pythae.trainers import *
-from pythae.trainers.training_callbacks import *
+from src.pythae.trainers import *
+from src.pythae.trainers.training_callbacks import *
 
 PATH = os.path.dirname(os.path.abspath(__file__))
 

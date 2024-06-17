@@ -1,6 +1,6 @@
 from pydantic.dataclasses import dataclass
 
-from pythae.config import BaseConfig
+from src.pythae.config import BaseConfig
 
 
 @dataclass

@@ -4,17 +4,17 @@ from copy import deepcopy
 import pytest
 import torch
 
-from pythae.customexception import BadInheritanceError
-from pythae.models import RAE_GP, AutoModel, RAE_GP_Config
-from pythae.models.base.base_utils import ModelOutput
-from pythae.pipelines import GenerationPipeline, TrainingPipeline
-from pythae.samplers import (
+from src.pythae.customexception import BadInheritanceError
+from src.pythae.models import RAE_GP, AutoModel, RAE_GP_Config
+from src.pythae.models.base.base_utils import ModelOutput
+from src.pythae.pipelines import GenerationPipeline, TrainingPipeline
+from src.pythae.samplers import (
     GaussianMixtureSamplerConfig,
     IAFSamplerConfig,
     MAFSamplerConfig,
     NormalSamplerConfig,
 )
-from pythae.trainers import BaseTrainer, BaseTrainerConfig
+from src.pythae.trainers import BaseTrainer, BaseTrainerConfig
 from tests.data.custom_architectures import (
     Decoder_AE_Conv,
     Encoder_AE_Conv,

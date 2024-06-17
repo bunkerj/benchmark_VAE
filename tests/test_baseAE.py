@@ -4,8 +4,8 @@ import shutil
 import pytest
 import torch
 
-from pythae.customexception import BadInheritanceError
-from pythae.models import BaseAE, BaseAEConfig
+from src.pythae.customexception import BadInheritanceError
+from src.pythae.models import BaseAE, BaseAEConfig
 from tests.data.custom_architectures import (
     Decoder_AE_Conv,
     Encoder_AE_Conv,

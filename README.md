@@ -137,9 +137,9 @@ We validate the implementations by reproducing some results presented in the ori
 To launch a model training, you only need to call a `TrainingPipeline` instance. 
 
 ```python
->>> from pythae.pipelines import TrainingPipeline
->>> from pythae.models import VAE, VAEConfig
->>> from pythae.trainers import BaseTrainerConfig
+>>> from src.pythae.pipelines import TrainingPipeline
+>>> from src.pythae.models import VAE, VAEConfig
+>>> from src.pythae.trainers import BaseTrainerConfig
 
 >>> # Set up the training configuration
 >>> my_training_config = BaseTrainerConfig(
@@ -195,9 +195,9 @@ See [README.md](https://github.com/clementchadebec/benchmark_VAE/tree/main/examp
 The easiest way to launch a data generation from a trained model consists in using the built-in `GenerationPipeline` provided in Pythae. Say you want to generate 100 samples using a `MAFSampler` all you have to do is 1) relaod the trained model, 2) define the sampler's configuration and 3) create and launch the `GenerationPipeline` as follows
 
 ```python
->>> from pythae.models import AutoModel
->>> from pythae.samplers import MAFSamplerConfig
->>> from pythae.pipelines import GenerationPipeline
+>>> from src.pythae.models import AutoModel
+>>> from src.pythae.samplers import MAFSamplerConfig
+>>> from src.pythae.pipelines import GenerationPipeline
 >>> # Retrieve the trained model
 >>> my_trained_vae = AutoModel.load_from_folder(
 ...	'path/to/your/trained/model'
@@ -227,8 +227,8 @@ The easiest way to launch a data generation from a trained model consists in usi
 Alternatively, you can launch the data generation process from a trained model directly with the sampler. For instance, to generate new data with your sampler, run the following.
 
 ```python
->>> from pythae.models import AutoModel
->>> from pythae.samplers import NormalSampler
+>>> from src.pythae.models import AutoModel
+>>> from src.pythae.samplers import NormalSampler
 >>> # Retrieve the trained model
 >>> my_trained_vae = AutoModel.load_from_folder(
 ...	'path/to/your/trained/model'
@@ -249,8 +249,8 @@ If you set `output_dir` to a specific path, the generated images will be saved a
 The samplers can be used with any model as long as it is suited. For instance, a `GaussianMixtureSampler` instance can be used to generate from any model but a `VAMPSampler` will only be usable with a `VAMP` model. Check [here](#available-samplers) to see which ones apply to your model. Be carefull that some samplers such as the `GaussianMixtureSampler` for instance may need to be fitted by calling the `fit` method before using. Below is an example for the `GaussianMixtureSampler`. 
 
 ```python
->>> from pythae.models import AutoModel
->>> from pythae.samplers import GaussianMixtureSampler, GaussianMixtureSamplerConfig
+>>> from src.pythae.models import AutoModel
+>>> from src.pythae.samplers import GaussianMixtureSampler, GaussianMixtureSamplerConfig
 >>> # Retrieve the trained model
 >>> my_trained_vae = AutoModel.load_from_folder(
 ...	'path/to/your/trained/model'
@@ -280,8 +280,8 @@ The samplers can be used with any model as long as it is suited. For instance, a
 Pythae provides you the possibility to define your own neural networks within the VAE models. For instance, say you want to train a Wassertstein AE with a specific encoder and decoder, you can do the following:
 
 ```python
->>> from pythae.models.nn import BaseEncoder, BaseDecoder
->>> from pythae.models.base.base_utils import ModelOutput
+>>> from src.pythae.models.nn import BaseEncoder, BaseDecoder
+>>> from src.pythae.models.base.base_utils import ModelOutput
 >>> class My_Encoder(BaseEncoder):
 ...	def __init__(self, args=None): # Args is a ModelConfig instance
 ...		BaseEncoder.__init__(self)
@@ -313,7 +313,7 @@ Pythae provides you the possibility to define your own neural networks within th
 And now build the model
 
 ```python
->>> from pythae.models import WAE_MMD, WAE_MMD_Config
+>>> from src.pythae.models import WAE_MMD, WAE_MMD_Config
 >>> # Set up the model configuration 
 >>> my_wae_config = model_config = WAE_MMD_Config(
 ...	input_dim=(1, 28, 28),
@@ -338,7 +338,7 @@ And now build the model
 You can also find predefined neural network architectures for the most common data sets (*i.e.* MNIST, CIFAR, CELEBA ...) that can be loaded as follows
 
 ```python
->>> from pythae.models.nn.benchmark.mnist import (
+>>> from src.pythae.models.nn.benchmark.mnist import (
 ...	Encoder_Conv_AE_MNIST, # For AE based model (only return embeddings)
 ...	Encoder_Conv_VAE_MNIST, # For VAE based model (return embeddings and log_covariances)
 ...	Decoder_Conv_AE_MNIST
@@ -407,7 +407,7 @@ the repo `your_hf_hub_repo` does not exist, a folder having the same name will b
 ### Downloading models from the Hub
 Equivalently, you can download or reload any Pythae's model directly from the Hub using the method `load_from_hf_hub`
 ```python
->>> from pythae.models import AutoModel
+>>> from src.pythae.models import AutoModel
 >>> my_downloaded_vae = AutoModel.load_from_hf_hub(hf_hub_path="path_to_hf_repo")
 ```
 
@@ -428,7 +428,7 @@ Launching an experiment monitoring with `wandb` in pythae is pretty simple. The 
 
 ```python
 >>> # Create you callback
->>> from pythae.trainers.training_callbacks import WandbCallback
+>>> from src.pythae.trainers.training_callbacks import WandbCallback
 >>> callbacks = [] # the TrainingPipeline expects a list of callbacks
 >>> wandb_cb = WandbCallback() # Build the callback 
 >>> # SetUp the callback 
@@ -467,7 +467,7 @@ Launching an experiment monitoring with `mlfow` in pythae is pretty simple. The 
 
 ```python
 >>> # Create you callback
->>> from pythae.trainers.training_callbacks import MLFlowCallback
+>>> from src.pythae.trainers.training_callbacks import MLFlowCallback
 >>> callbacks = [] # the TrainingPipeline expects a list of callbacks
 >>> mlflow_cb = MLFlowCallback() # Build the callback 
 >>> # SetUp the callback 
@@ -508,7 +508,7 @@ Launching an experiment monitoring with `comet_ml` in pythae is pretty simple. T
 
 ```python
 >>> # Create you callback
->>> from pythae.trainers.training_callbacks import CometCallback
+>>> from src.pythae.trainers.training_callbacks import CometCallback
 >>> callbacks = [] # the TrainingPipeline expects a list of callbacks
 >>> comet_cb = CometCallback() # Build the callback 
 >>> # SetUp the callback 

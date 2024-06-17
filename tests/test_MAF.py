@@ -5,11 +5,11 @@ import numpy as np
 import pytest
 import torch
 
-from pythae.models import AutoModel
-from pythae.models.base.base_utils import ModelOutput
-from pythae.models.normalizing_flows import MAF, MAFConfig, NFModel
-from pythae.pipelines import TrainingPipeline
-from pythae.trainers import BaseTrainer, BaseTrainerConfig
+from src.pythae.models import AutoModel
+from src.pythae.models.base.base_utils import ModelOutput
+from src.pythae.models.normalizing_flows import MAF, MAFConfig, NFModel
+from src.pythae.pipelines import TrainingPipeline
+from src.pythae.trainers import BaseTrainer, BaseTrainerConfig
 
 PATH = os.path.dirname(os.path.abspath(__file__))
 

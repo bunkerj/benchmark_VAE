@@ -5,17 +5,17 @@ import pytest
 import torch
 from torch.optim import Adam
 
-from pythae.customexception import BadInheritanceError
-from pythae.models import RAE_L2, AutoModel, RAE_L2_Config
-from pythae.models.base.base_utils import ModelOutput
-from pythae.pipelines import GenerationPipeline, TrainingPipeline
-from pythae.samplers import (
+from src.pythae.customexception import BadInheritanceError
+from src.pythae.models import RAE_L2, AutoModel, RAE_L2_Config
+from src.pythae.models.base.base_utils import ModelOutput
+from src.pythae.pipelines import GenerationPipeline, TrainingPipeline
+from src.pythae.samplers import (
     GaussianMixtureSamplerConfig,
     IAFSamplerConfig,
     MAFSamplerConfig,
     NormalSamplerConfig,
 )
-from pythae.trainers import (
+from src.pythae.trainers import (
     BaseTrainerConfig,
     CoupledOptimizerTrainer,
     CoupledOptimizerTrainerConfig,

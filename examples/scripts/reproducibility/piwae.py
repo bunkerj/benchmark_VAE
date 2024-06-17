@@ -7,11 +7,11 @@ import torch
 import torch.nn as nn
 from torch.utils.data import Dataset
 
-from pythae.data.datasets import DatasetOutput
-from pythae.models import PIWAE, AutoModel, PIWAEConfig
-from pythae.models.base.base_utils import ModelOutput
-from pythae.models.nn import BaseDecoder, BaseEncoder
-from pythae.trainers import CoupledOptimizerTrainer, CoupledOptimizerTrainerConfig
+from src.pythae.data.datasets import DatasetOutput
+from src.pythae.models import PIWAE, AutoModel, PIWAEConfig
+from src.pythae.models.base.base_utils import ModelOutput
+from src.pythae.models.nn import BaseDecoder, BaseEncoder
+from src.pythae.trainers import CoupledOptimizerTrainer, CoupledOptimizerTrainerConfig
 
 logger = logging.getLogger(__name__)
 console = logging.StreamHandler()

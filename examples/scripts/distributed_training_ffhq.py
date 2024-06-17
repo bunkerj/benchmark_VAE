@@ -10,12 +10,12 @@ from PIL import Image
 from torch.utils.data import Dataset
 from torchvision import transforms
 
-from pythae.data.datasets import DatasetOutput
-from pythae.models import VQVAE, VQVAEConfig
-from pythae.models.base.base_utils import ModelOutput
-from pythae.models.nn.base_architectures import BaseDecoder, BaseEncoder
-from pythae.models.nn.benchmarks.utils import ResBlock
-from pythae.trainers import BaseTrainer, BaseTrainerConfig
+from src.pythae.data.datasets import DatasetOutput
+from src.pythae.models import VQVAE, VQVAEConfig
+from src.pythae.models.base.base_utils import ModelOutput
+from src.pythae.models.nn.base_architectures import BaseDecoder, BaseEncoder
+from src.pythae.models.nn.benchmarks.utils import ResBlock
+from src.pythae.trainers import BaseTrainer, BaseTrainerConfig
 
 logger = logging.getLogger(__name__)
 console = logging.StreamHandler()
@@ -179,7 +179,7 @@ def main(args):
 
     # Only log to wandb if main process
     if args.use_wandb and (training_config.rank == 0 or training_config == -1):
-        from pythae.trainers.training_callbacks import WandbCallback
+        from src.pythae.trainers.training_callbacks import WandbCallback
 
         wandb_cb = WandbCallback()
         wandb_cb.setup(

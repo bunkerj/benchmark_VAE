@@ -4,9 +4,9 @@ import numpy as np
 import pytest
 import torch
 
-from pythae.models import AE, VAE, AEConfig, VAEConfig
-from pythae.pipelines import GenerationPipeline
-from pythae.samplers import (
+from src.pythae.models import AE, VAE, AEConfig, VAEConfig
+from src.pythae.pipelines import GenerationPipeline
+from src.pythae.samplers import (
     HypersphereUniformSampler,
     HypersphereUniformSamplerConfig,
     NormalSampler,

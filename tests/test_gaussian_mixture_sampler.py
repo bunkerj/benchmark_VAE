@@ -4,15 +4,15 @@ import numpy as np
 import pytest
 import torch
 
-from pythae.models import AE, VAE, AEConfig, VAEConfig
-from pythae.pipelines import GenerationPipeline
-from pythae.samplers import (
+from src.pythae.models import AE, VAE, AEConfig, VAEConfig
+from src.pythae.pipelines import GenerationPipeline
+from src.pythae.samplers import (
     GaussianMixtureSampler,
     GaussianMixtureSamplerConfig,
     NormalSampler,
     NormalSamplerConfig,
 )
-from pythae.data.preprocessors import DataProcessor
+from src.pythae.data.preprocessors import DataProcessor
 
 PATH = os.path.dirname(os.path.abspath(__file__))
 

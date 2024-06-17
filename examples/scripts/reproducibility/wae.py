@@ -7,11 +7,11 @@ import numpy as np
 import torch
 import torch.nn as nn
 
-from pythae.data.preprocessors import DataProcessor
-from pythae.models import WAE_MMD, WAE_MMD_Config
-from pythae.models.base.base_utils import ModelOutput
-from pythae.models.nn import BaseDecoder, BaseEncoder
-from pythae.trainers import BaseTrainer, BaseTrainerConfig
+from src.pythae.data.preprocessors import DataProcessor
+from src.pythae.models import WAE_MMD, WAE_MMD_Config
+from src.pythae.models.base.base_utils import ModelOutput
+from src.pythae.models.nn import BaseDecoder, BaseEncoder
+from src.pythae.trainers import BaseTrainer, BaseTrainerConfig
 
 logger = logging.getLogger(__name__)
 console = logging.StreamHandler()

@@ -3,7 +3,7 @@ lines of code.
 
 .. code-block::
 
-    >>> from pythae.models import AutoModel
+    >>> from src.pythae.models import AutoModel
     >>> model = AutoModel.load_from_folder(dir_path='path/to/my_model') 
 """
 

@@ -4,8 +4,8 @@ from copy import deepcopy
 import pytest
 import torch
 
-from pythae.models import Adversarial_AE, Adversarial_AE_Config
-from pythae.trainers import AdversarialTrainer, AdversarialTrainerConfig
+from src.pythae.models import Adversarial_AE, Adversarial_AE_Config
+from src.pythae.trainers import AdversarialTrainer, AdversarialTrainerConfig
 from tests.data.custom_architectures import *
 
 PATH = os.path.dirname(os.path.abspath(__file__))

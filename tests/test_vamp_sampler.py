@@ -4,9 +4,9 @@ import numpy as np
 import pytest
 import torch
 
-from pythae.models import VAMP, VAMPConfig
-from pythae.pipelines import GenerationPipeline
-from pythae.samplers import (
+from src.pythae.models import VAMP, VAMPConfig
+from src.pythae.pipelines import GenerationPipeline
+from src.pythae.samplers import (
     NormalSampler,
     NormalSamplerConfig,
     VAMPSampler,

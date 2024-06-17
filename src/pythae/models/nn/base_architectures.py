@@ -18,8 +18,8 @@ class BaseEncoder(nn.Module):
 
         .. code-block::
 
-            >>> from pythae.models.nn import BaseEncoder
-            >>> from pythae.models.base.base_utils import ModelOutput
+            >>> from src.pythae.models.nn import BaseEncoder
+            >>> from src.pythae.models.base.base_utils import ModelOutput
             ...
             >>> class My_Encoder(BaseEncoder):
             ...
@@ -60,8 +60,8 @@ class BaseDecoder(nn.Module):
 
         .. code-block::
 
-            >>> from pythae.models.nn import BaseDecoder
-            >>> from pythae.models.base.base_utils import ModelOutput
+            >>> from src.pythae.models.nn import BaseDecoder
+            >>> from src.pythae.models.base.base_utils import ModelOutput
             ...
             >>> class My_decoder(BaseDecoder):
             ...
@@ -109,8 +109,8 @@ class BaseMetric(nn.Module):
 
         .. code-block::
 
-            >>> from pythae.models.nn import BaseMetric
-            >>> from pythae.models.base.base_utils import ModelOutput
+            >>> from src.pythae.models.nn import BaseMetric
+            >>> from src.pythae.models.base.base_utils import ModelOutput
             ...
             >>> class My_Metric(BaseMetric):
             ...
@@ -150,8 +150,8 @@ class BaseDiscriminator(nn.Module):
 
         .. code-block::
 
-            >>> from pythae.models.nn import BaseDiscriminator
-            >>> from pythae.models.base.base_utils import ModelOutput
+            >>> from src.pythae.models.nn import BaseDiscriminator
+            >>> from src.pythae.models.base.base_utils import ModelOutput
             ...
             >>> class My_Discriminator(BaseDiscriminator):
             ...

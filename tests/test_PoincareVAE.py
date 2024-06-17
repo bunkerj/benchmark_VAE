@@ -4,12 +4,12 @@ from copy import deepcopy
 import pytest
 import torch
 
-from pythae.customexception import BadInheritanceError
-from pythae.models import AutoModel, PoincareVAE, PoincareVAEConfig
-from pythae.models.base.base_utils import ModelOutput
-from pythae.models.pvae.pvae_utils import PoincareBall
-from pythae.pipelines import GenerationPipeline, TrainingPipeline
-from pythae.samplers import (
+from src.pythae.customexception import BadInheritanceError
+from src.pythae.models import AutoModel, PoincareVAE, PoincareVAEConfig
+from src.pythae.models.base.base_utils import ModelOutput
+from src.pythae.models.pvae.pvae_utils import PoincareBall
+from src.pythae.pipelines import GenerationPipeline, TrainingPipeline
+from src.pythae.samplers import (
     GaussianMixtureSamplerConfig,
     IAFSamplerConfig,
     MAFSamplerConfig,
@@ -17,7 +17,7 @@ from pythae.samplers import (
     PoincareDiskSamplerConfig,
     TwoStageVAESamplerConfig,
 )
-from pythae.trainers import BaseTrainer, BaseTrainerConfig
+from src.pythae.trainers import BaseTrainer, BaseTrainerConfig
 from tests.data.custom_architectures import (
     Decoder_AE_Conv,
     Encoder_SVAE_Conv,

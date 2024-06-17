@@ -19,8 +19,8 @@ class Encoder_ResNet_AE_MNIST(BaseEncoder):
 
     .. code-block::
 
-        >>> from pythae.models.nn.benchmarks.mnist import Encoder_ResNet_AE_MNIST
-        >>> from pythae.models import AEConfig
+        >>> from src.pythae.models.nn.benchmarks.mnist import Encoder_ResNet_AE_MNIST
+        >>> from src.pythae.models import AEConfig
         >>> model_config = AEConfig(input_dim=(1, 28, 28), latent_dim=16)
         >>> encoder = Encoder_ResNet_AE_MNIST(model_config)
         >>> encoder
@@ -61,7 +61,7 @@ class Encoder_ResNet_AE_MNIST(BaseEncoder):
 
     .. code-block::
 
-        >>> from pythae.models import AE
+        >>> from src.pythae.models import AE
         >>> model = AE(model_config=model_config, encoder=encoder)
         >>> model.encoder == encoder
         ... True
@@ -160,8 +160,8 @@ class Encoder_ResNet_VAE_MNIST(BaseEncoder):
 
     .. code-block::
 
-        >>> from pythae.models.nn.benchmarks.mnist import Encoder_ResNet_VAE_MNIST
-        >>> from pythae.models import VAEConfig
+        >>> from src.pythae.models.nn.benchmarks.mnist import Encoder_ResNet_VAE_MNIST
+        >>> from src.pythae.models import VAEConfig
         >>> model_config = VAEConfig(input_dim=(1, 28, 28), latent_dim=16)
         >>> encoder = Encoder_ResNet_VAE_MNIST(model_config)
         >>> encoder
@@ -202,7 +202,7 @@ class Encoder_ResNet_VAE_MNIST(BaseEncoder):
 
     and then passed to a :class:`pythae.models` instance
 
-        >>> from pythae.models import VAE
+        >>> from src.pythae.models import VAE
         >>> model = VAE(model_config=model_config, encoder=encoder)
         >>> model.encoder == encoder
         ... True
@@ -303,8 +303,8 @@ class Encoder_ResNet_SVAE_MNIST(BaseEncoder):
 
     .. code-block::
 
-        >>> from pythae.models.nn.benchmarks.mnist import Encoder_ResNet_SVAE_MNIST
-        >>> from pythae.models import SVAEConfig
+        >>> from src.pythae.models.nn.benchmarks.mnist import Encoder_ResNet_SVAE_MNIST
+        >>> from src.pythae.models import SVAEConfig
         >>> model_config = SVAEConfig(input_dim=(1, 28, 28), latent_dim=16)
         >>> encoder = Encoder_ResNet_SVAE_MNIST(model_config)
         >>> encoder
@@ -344,7 +344,7 @@ class Encoder_ResNet_SVAE_MNIST(BaseEncoder):
 
     and then passed to a :class:`pythae.models` instance
 
-        >>> from pythae.models import SVAE
+        >>> from src.pythae.models import SVAE
         >>> model = SVAE(model_config=model_config, encoder=encoder)
         >>> model.encoder == encoder
         ... True
@@ -447,8 +447,8 @@ class Encoder_ResNet_VQVAE_MNIST(BaseEncoder):
 
     .. code-block::
 
-        >>> from pythae.models.nn.benchmarks.mnist import Encoder_ResNet_VQVAE_MNIST
-        >>> from pythae.models import VQVAEConfig
+        >>> from src.pythae.models.nn.benchmarks.mnist import Encoder_ResNet_VQVAE_MNIST
+        >>> from src.pythae.models import VQVAEConfig
         >>> model_config = VQVAEConfig(input_dim=(1, 28, 28), latent_dim=16)
         >>> encoder = Encoder_ResNet_VQVAE_MNIST(model_config)
         >>> encoder
@@ -487,7 +487,7 @@ class Encoder_ResNet_VQVAE_MNIST(BaseEncoder):
 
     and then passed to a :class:`pythae.models` instance
 
-        >>> from pythae.models import VQVAE
+        >>> from src.pythae.models import VQVAE
         >>> model = VQVAE(model_config=model_config, encoder=encoder)
         >>> model.encoder == encoder
         ... True
@@ -586,15 +586,15 @@ class Encoder_ResNet_HRQVAE_MNIST(BaseEncoder):
 
     .. code-block::
 
-        >>> from pythae.models.nn.benchmarks.mnist import Encoder_ResNet_HRQVAE_MNIST
-        >>> from pythae.models import HRQVAEConfig
+        >>> from src.pythae.models.nn.benchmarks.mnist import Encoder_ResNet_HRQVAE_MNIST
+        >>> from src.pythae.models import HRQVAEConfig
         >>> model_config = HRQVAEConfig(input_dim=(1, 28, 28), latent_dim=16)
         >>> encoder = Encoder_ResNet_HRQVAE_MNIST(model_config)
 
 
     and then passed to a :class:`pythae.models` instance
 
-        >>> from pythae.models import HRQVAE
+        >>> from src.pythae.models import HRQVAE
         >>> model = HRQVAE(model_config=model_config, encoder=encoder)
         >>> model.encoder == encoder
         ... True
@@ -696,8 +696,8 @@ class Decoder_ResNet_AE_MNIST(BaseDecoder):
 
     .. code-block::
 
-        >>> from pythae.models.nn.benchmarks.mnist import Decoder_ResNet_AE_MNIST
-        >>> from pythae.models import VAEConfig
+        >>> from src.pythae.models.nn.benchmarks.mnist import Decoder_ResNet_AE_MNIST
+        >>> from src.pythae.models import VAEConfig
         >>> model_config = VAEConfig(input_dim=(1, 28, 28), latent_dim=16)
         >>> decoder = Decoder_ResNet_AE_MNIST(model_config)
         >>> decoder
@@ -739,7 +739,7 @@ class Decoder_ResNet_AE_MNIST(BaseDecoder):
 
     and then passed to a :class:`pythae.models` instance
 
-        >>> from pythae.models import VAE
+        >>> from src.pythae.models import VAE
         >>> model = VAE(model_config=model_config, decoder=decoder)
         >>> model.decoder == decoder
         ... True
@@ -852,8 +852,8 @@ class Decoder_ResNet_VQVAE_MNIST(BaseDecoder):
 
     .. code-block::
 
-        >>> from pythae.models.nn.benchmarks.mnist import Decoder_ResNet_VQVAE_MNIST
-        >>> from pythae.models import VQVAEConfig
+        >>> from src.pythae.models.nn.benchmarks.mnist import Decoder_ResNet_VQVAE_MNIST
+        >>> from src.pythae.models import VQVAEConfig
         >>> model_config = VQVAEConfig(input_dim=(1, 28, 28), latent_dim=16)
         >>> decoder = Decoder_ResNet_VQVAE_MNIST(model_config)
         >>> decoder
@@ -893,7 +893,7 @@ class Decoder_ResNet_VQVAE_MNIST(BaseDecoder):
 
     and then passed to a :class:`pythae.models` instance
 
-        >>> from pythae.models import VQVAE
+        >>> from src.pythae.models import VQVAE
         >>> model = VQVAE(model_config=model_config, decoder=decoder)
         >>> model.decoder == decoder
         ... True
@@ -1003,15 +1003,15 @@ class Decoder_ResNet_HRQVAE_MNIST(BaseDecoder):
 
     .. code-block::
 
-        >>> from pythae.models.nn.benchmarks.mnist import Decoder_ResNet_HRQVAE_MNIST
-        >>> from pythae.models import HRQVAEConfig
+        >>> from src.pythae.models.nn.benchmarks.mnist import Decoder_ResNet_HRQVAE_MNIST
+        >>> from src.pythae.models import HRQVAEConfig
         >>> model_config = HRQVAEConfig(input_dim=(1, 28, 28), latent_dim=16)
         >>> decoder = Decoder_ResNet_HRQVAE_MNIST(model_config)
 
 
     and then passed to a :class:`pythae.models` instance
 
-        >>> from pythae.models import HRQVAE
+        >>> from src.pythae.models import HRQVAE
         >>> model = HRQVAE(model_config=model_config, decoder=decoder)
         >>> model.decoder == decoder
         ... True

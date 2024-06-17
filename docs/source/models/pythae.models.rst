@@ -72,9 +72,9 @@ instance.
 
 .. code-block::
 
-    >>> from pythae.pipelines import TrainingPipeline
-    >>> from pythae.models import VAE, VAEConfig
-    >>> from pythae.trainers import BaseTrainerConfig
+    >>> from src.pythae.pipelines import TrainingPipeline
+    >>> from src.pythae.models import VAE, VAEConfig
+    >>> from src.pythae.trainers import BaseTrainerConfig
 
     >>> # Set up the training configuration
     >>> my_training_config = BaseTrainerConfig(

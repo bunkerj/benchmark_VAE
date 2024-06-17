@@ -4,8 +4,8 @@ from copy import deepcopy
 import pytest
 import torch
 
-from pythae.models import RAE_L2, RAE_L2_Config
-from pythae.trainers import CoupledOptimizerTrainer, CoupledOptimizerTrainerConfig
+from src.pythae.models import RAE_L2, RAE_L2_Config
+from src.pythae.trainers import CoupledOptimizerTrainer, CoupledOptimizerTrainerConfig
 from tests.data.custom_architectures import *
 
 PATH = os.path.dirname(os.path.abspath(__file__))

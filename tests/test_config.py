@@ -4,10 +4,10 @@ import os
 import pytest
 from pydantic import ValidationError
 
-from pythae.config import BaseConfig
-from pythae.models import AEConfig, BaseAEConfig
-from pythae.samplers import BaseSamplerConfig, NormalSamplerConfig
-from pythae.trainers import AdversarialTrainerConfig, BaseTrainerConfig
+from src.pythae.config import BaseConfig
+from src.pythae.models import AEConfig, BaseAEConfig
+from src.pythae.samplers import BaseSamplerConfig, NormalSamplerConfig
+from src.pythae.trainers import AdversarialTrainerConfig, BaseTrainerConfig
 
 PATH = os.path.dirname(os.path.abspath(__file__))
 

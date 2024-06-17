@@ -4,8 +4,8 @@ from copy import deepcopy
 import pytest
 import torch
 
-from pythae.models import VAEGAN, VAEGANConfig
-from pythae.trainers import (
+from src.pythae.models import VAEGAN, VAEGANConfig
+from src.pythae.trainers import (
     CoupledOptimizerAdversarialTrainer,
     CoupledOptimizerAdversarialTrainerConfig,
 )

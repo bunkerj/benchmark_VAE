@@ -5,18 +5,18 @@ import numpy as np
 import pytest
 import torch
 
-from pythae.customexception import BadInheritanceError
-from pythae.models import VAEGAN, AutoModel, VAEGANConfig
-from pythae.models.base.base_utils import ModelOutput
-from pythae.pipelines import GenerationPipeline, TrainingPipeline
-from pythae.samplers import (
+from src.pythae.customexception import BadInheritanceError
+from src.pythae.models import VAEGAN, AutoModel, VAEGANConfig
+from src.pythae.models.base.base_utils import ModelOutput
+from src.pythae.pipelines import GenerationPipeline, TrainingPipeline
+from src.pythae.samplers import (
     GaussianMixtureSamplerConfig,
     IAFSamplerConfig,
     MAFSamplerConfig,
     NormalSamplerConfig,
     TwoStageVAESamplerConfig,
 )
-from pythae.trainers import (
+from src.pythae.trainers import (
     BaseTrainerConfig,
     CoupledOptimizerAdversarialTrainer,
     CoupledOptimizerAdversarialTrainerConfig,

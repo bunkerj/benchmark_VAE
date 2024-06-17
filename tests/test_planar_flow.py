@@ -6,12 +6,12 @@ import pytest
 import torch
 
 from pydantic import ValidationError
-from pythae.data.datasets import BaseDataset
-from pythae.models import AutoModel
-from pythae.models.base.base_utils import ModelOutput
-from pythae.models.normalizing_flows import NFModel, PlanarFlow, PlanarFlowConfig
-from pythae.pipelines import TrainingPipeline
-from pythae.trainers import BaseTrainer, BaseTrainerConfig
+from src.pythae.data.datasets import BaseDataset
+from src.pythae.models import AutoModel
+from src.pythae.models.base.base_utils import ModelOutput
+from src.pythae.models.normalizing_flows import NFModel, PlanarFlow, PlanarFlowConfig
+from src.pythae.pipelines import TrainingPipeline
+from src.pythae.trainers import BaseTrainer, BaseTrainerConfig
 
 PATH = os.path.dirname(os.path.abspath(__file__))
 

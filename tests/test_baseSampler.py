@@ -5,8 +5,8 @@ import pytest
 import torch
 from imageio import imread
 
-from pythae.models import BaseAE, BaseAEConfig
-from pythae.samplers import BaseSampler, BaseSamplerConfig
+from src.pythae.models import BaseAE, BaseAEConfig
+from src.pythae.samplers import BaseSampler, BaseSamplerConfig
 
 PATH = os.path.dirname(os.path.abspath(__file__))
 

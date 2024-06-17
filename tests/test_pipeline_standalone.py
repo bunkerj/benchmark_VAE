@@ -4,12 +4,12 @@ import pytest
 import torch
 from torch.utils.data import Dataset, DataLoader
 
-from pythae.customexception import DatasetError
-from pythae.data.datasets import DatasetOutput
-from pythae.models import VAE, VAEConfig, Adversarial_AE, Adversarial_AE_Config, RAE_L2, RAE_L2_Config, VAEGAN, VAEGANConfig
-from pythae.pipelines import *
-from pythae.samplers import NormalSampler, NormalSamplerConfig
-from pythae.trainers import BaseTrainerConfig
+from src.pythae.customexception import DatasetError
+from src.pythae.data.datasets import DatasetOutput
+from src.pythae.models import VAE, VAEConfig, Adversarial_AE, Adversarial_AE_Config, RAE_L2, RAE_L2_Config, VAEGAN, VAEGANConfig
+from src.pythae.pipelines import *
+from src.pythae.samplers import NormalSampler, NormalSamplerConfig
+from src.pythae.trainers import BaseTrainerConfig
 
 PATH = os.path.dirname(os.path.abspath(__file__))
 

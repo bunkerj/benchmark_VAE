@@ -19,8 +19,8 @@ class Encoder_ResNet_AE_CIFAR(BaseEncoder):
 
     .. code-block::
 
-        >>> from pythae.models.nn.benchmarks.cifar import Encoder_ResNet_AE_CIFAR
-        >>> from pythae.models import AEConfig
+        >>> from src.pythae.models.nn.benchmarks.cifar import Encoder_ResNet_AE_CIFAR
+        >>> from src.pythae.models import AEConfig
         >>> model_config = AEConfig(input_dim=(3, 32, 32), latent_dim=16)
         >>> encoder = Encoder_ResNet_AE_CIFAR(model_config)
         >>> encoder
@@ -60,7 +60,7 @@ class Encoder_ResNet_AE_CIFAR(BaseEncoder):
 
     and then passed to a :class:`pythae.models` instance
 
-        >>> from pythae.models import AE
+        >>> from src.pythae.models import AE
         >>> model = AE(model_config=model_config, encoder=encoder)
         >>> model.encoder == encoder
         ... True
@@ -159,8 +159,8 @@ class Encoder_ResNet_VAE_CIFAR(BaseEncoder):
 
     .. code-block::
 
-        >>> from pythae.models.nn.benchmarks.cifar import Encoder_ResNet_VAE_CIFAR
-        >>> from pythae.models import VAEConfig
+        >>> from src.pythae.models.nn.benchmarks.cifar import Encoder_ResNet_VAE_CIFAR
+        >>> from src.pythae.models import VAEConfig
         >>> model_config = VAEConfig(input_dim=(3, 32, 32), latent_dim=16)
         >>> encoder = Encoder_ResNet_VAE_CIFAR(model_config)
         >>> encoder
@@ -202,7 +202,7 @@ class Encoder_ResNet_VAE_CIFAR(BaseEncoder):
 
     and then passed to a :class:`pythae.models` instance
 
-        >>> from pythae.models import VAE
+        >>> from src.pythae.models import VAE
         >>> model = VAE(model_config=model_config, encoder=encoder)
         >>> model.encoder == encoder
         ... True
@@ -302,8 +302,8 @@ class Encoder_ResNet_SVAE_CIFAR(BaseEncoder):
 
     .. code-block::
 
-        >>> from pythae.models.nn.benchmarks.cifar import Encoder_ResNet_SVAE_CIFAR
-        >>> from pythae.models import SVAEConfig
+        >>> from src.pythae.models.nn.benchmarks.cifar import Encoder_ResNet_SVAE_CIFAR
+        >>> from src.pythae.models import SVAEConfig
         >>> model_config = SVAEConfig(input_dim=(3, 32, 32), latent_dim=16)
         >>> encoder = Encoder_ResNet_SVAE_CIFAR(model_config)
         >>> encoder
@@ -344,7 +344,7 @@ class Encoder_ResNet_SVAE_CIFAR(BaseEncoder):
 
     and then passed to a :class:`pythae.models` instance
 
-        >>> from pythae.models import SVAE
+        >>> from src.pythae.models import SVAE
         >>> model = SVAE(model_config=model_config, encoder=encoder)
         >>> model.encoder == encoder
         ... True
@@ -447,8 +447,8 @@ class Encoder_ResNet_VQVAE_CIFAR(BaseEncoder):
 
     .. code-block::
 
-        >>> from pythae.models.nn.benchmarks.cifar import Encoder_ResNet_VQVAE_CIFAR
-        >>> from pythae.models import VQVAEConfig
+        >>> from src.pythae.models.nn.benchmarks.cifar import Encoder_ResNet_VQVAE_CIFAR
+        >>> from src.pythae.models import VQVAEConfig
         >>> model_config = VQVAEConfig(input_dim=(3, 32, 32), latent_dim=16)
         >>> encoder = Encoder_ResNet_VQVAE_CIFAR(model_config)
         >>> encoder
@@ -488,7 +488,7 @@ class Encoder_ResNet_VQVAE_CIFAR(BaseEncoder):
 
     and then passed to a :class:`pythae.models` instance
 
-        >>> from pythae.models import VQVAE
+        >>> from src.pythae.models import VQVAE
         >>> model = VQVAE(model_config=model_config, encoder=encoder)
         >>> model.encoder == encoder
         ... True
@@ -586,8 +586,8 @@ class Decoder_ResNet_AE_CIFAR(BaseDecoder):
 
     .. code-block::
 
-        >>> from pythae.models.nn.benchmarks.cifar import Decoder_ResNet_AE_CIFAR
-        >>> from pythae.models import VAEConfig
+        >>> from src.pythae.models.nn.benchmarks.cifar import Decoder_ResNet_AE_CIFAR
+        >>> from src.pythae.models import VAEConfig
         >>> model_config = VAEConfig(input_dim=(3, 32, 32), latent_dim=16)
         >>> decoder = Decoder_ResNet_AE_CIFAR(model_config)
         >>> decoder
@@ -626,7 +626,7 @@ class Decoder_ResNet_AE_CIFAR(BaseDecoder):
 
     and then passed to a :class:`pythae.models` instance
 
-        >>> from pythae.models import VAE
+        >>> from src.pythae.models import VAE
         >>> model = VAE(model_config=model_config, decoder=decoder)
         >>> model.decoder == decoder
         ... True
@@ -728,8 +728,8 @@ class Decoder_ResNet_VQVAE_CIFAR(BaseDecoder):
 
     .. code-block::
 
-        >>> from pythae.models.nn.benchmarks.cifar import Decoder_ResNet_VQVAE_CIFAR
-        >>> from pythae.models import VQVAEConfig
+        >>> from src.pythae.models.nn.benchmarks.cifar import Decoder_ResNet_VQVAE_CIFAR
+        >>> from src.pythae.models import VQVAEConfig
         >>> model_config = VQVAEConfig(input_dim=(3, 32, 32), latent_dim=16)
         >>> decoder = Decoder_ResNet_VQVAE_CIFAR(model_config)
         >>> decoder
@@ -766,7 +766,7 @@ class Decoder_ResNet_VQVAE_CIFAR(BaseDecoder):
 
     and then passed to a :class:`pythae.models` instance
 
-        >>> from pythae.models import VQVAE
+        >>> from src.pythae.models import VQVAE
         >>> model = VQVAE(model_config=model_config, decoder=decoder)
         >>> model.decoder == decoder
         ... True

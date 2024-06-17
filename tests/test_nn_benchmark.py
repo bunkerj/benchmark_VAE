@@ -2,11 +2,11 @@ import numpy as np
 import pytest
 import torch
 
-from pythae.models import AEConfig, VAEConfig
-from pythae.models.nn.benchmarks.celeba import *
-from pythae.models.nn.benchmarks.cifar import *
-from pythae.models.nn.benchmarks.mnist import *
-from pythae.models.nn.default_architectures import *
+from src.pythae.models import AEConfig, VAEConfig
+from src.pythae.models.nn.benchmarks.celeba import *
+from src.pythae.models.nn.benchmarks.cifar import *
+from src.pythae.models.nn.benchmarks.mnist import *
+from src.pythae.models.nn.default_architectures import *
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 

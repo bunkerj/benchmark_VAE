@@ -27,9 +27,9 @@ instance.
 
 .. code-block::
 
-    >>> from pythae.pipelines import TrainingPipeline
-    >>> from pythae.models import VAE, VAEConfig
-    >>> from pythae.trainers import BaseTrainerConfig
+    >>> from src.pythae.pipelines import TrainingPipeline
+    >>> from src.pythae.models import VAE, VAEConfig
+    >>> from src.pythae.trainers import BaseTrainerConfig
 
     >>> # Set up the training configuration
     >>> my_training_config = BaseTrainerConfig(
@@ -68,9 +68,9 @@ provided in Pythae you only need 1) a trained model, 2) the sampler's configurat
 
 .. code-block::
 
-   >>> from pythae.models import AutoModel
-   >>> from pythae.samplers import MAFSamplerConfig
-   >>> from pythae.pipelines import GenerationPipeline
+   >>> from src.pythae.models import AutoModel
+   >>> from src.pythae.samplers import MAFSamplerConfig
+   >>> from src.pythae.pipelines import GenerationPipeline
    >>> # Retrieve the trained model
    >>> my_trained_vae = AutoModel.load_from_folder(
    ...	'path/to/your/trained/model'

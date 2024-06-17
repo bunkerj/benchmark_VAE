@@ -4,7 +4,7 @@ import numpy as np
 import torch
 import torch.nn as nn
 
-from pythae.models.base.base_utils import ModelOutput
+from src.pythae.models.base.base_utils import ModelOutput
 
 from ..base import BaseNF
 from ..layers import MaskedLinear

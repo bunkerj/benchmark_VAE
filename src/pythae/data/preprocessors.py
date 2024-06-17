@@ -16,7 +16,7 @@ import numpy as np
 import torch
 from typing_extensions import Literal
 
-from pythae.data.datasets import BaseDataset
+from src.pythae.data.datasets import BaseDataset
 
 logger = logging.getLogger(__name__)
 

@@ -6,12 +6,12 @@ import numpy as np
 import torch
 import torch.nn as nn
 
-from pythae.data.preprocessors import DataProcessor
-from pythae.models import RAE_L2, RAE_L2_Config
-from pythae.models.base.base_utils import ModelOutput
-from pythae.models.nn import BaseDecoder, BaseEncoder
-from pythae.models.rhvae import RHVAEConfig
-from pythae.trainers import CoupledOptimizerTrainer, CoupledOptimizerTrainerConfig
+from src.pythae.data.preprocessors import DataProcessor
+from src.pythae.models import RAE_L2, RAE_L2_Config
+from src.pythae.models.base.base_utils import ModelOutput
+from src.pythae.models.nn import BaseDecoder, BaseEncoder
+from src.pythae.models.rhvae import RHVAEConfig
+from src.pythae.trainers import CoupledOptimizerTrainer, CoupledOptimizerTrainerConfig
 
 logger = logging.getLogger(__name__)
 console = logging.StreamHandler()

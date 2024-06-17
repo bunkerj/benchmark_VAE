@@ -18,8 +18,8 @@ class Encoder_Conv_AE_CIFAR(BaseEncoder):
 
     .. code-block::
 
-            >>> from pythae.models.nn.benchmarks.cifar import Encoder_Conv_AE_CIFAR
-            >>> from pythae.models import AEConfig
+            >>> from src.pythae.models.nn.benchmarks.cifar import Encoder_Conv_AE_CIFAR
+            >>> from src.pythae.models import AEConfig
             >>> model_config = AEConfig(input_dim=(3, 32, 32), latent_dim=16)
             >>> encoder = Encoder_Conv_AE_CIFAR(model_config)
             >>> encoder
@@ -52,7 +52,7 @@ class Encoder_Conv_AE_CIFAR(BaseEncoder):
 
     and then passed to a :class:`pythae.models` instance
 
-        >>> from pythae.models import AE
+        >>> from src.pythae.models import AE
         >>> model = AE(model_config=model_config, encoder=encoder)
         >>> model.encoder == encoder
         ... True
@@ -164,8 +164,8 @@ class Encoder_Conv_VAE_CIFAR(BaseEncoder):
 
     .. code-block::
 
-            >>> from pythae.models.nn.benchmarks.cifar import Encoder_Conv_VAE_CIFAR
-            >>> from pythae.models import VAEConfig
+            >>> from src.pythae.models.nn.benchmarks.cifar import Encoder_Conv_VAE_CIFAR
+            >>> from src.pythae.models import VAEConfig
             >>> model_config = VAEConfig(input_dim=(3, 32, 32), latent_dim=16)
             >>> encoder = Encoder_Conv_VAE_CIFAR(model_config)
             >>> encoder
@@ -200,7 +200,7 @@ class Encoder_Conv_VAE_CIFAR(BaseEncoder):
 
     and then passed to a :class:`pythae.models` instance
 
-        >>> from pythae.models import VAE
+        >>> from src.pythae.models import VAE
         >>> model = VAE(model_config=model_config, encoder=encoder)
         >>> model.encoder == encoder
         ... True
@@ -322,8 +322,8 @@ class Encoder_Conv_SVAE_CIFAR(BaseEncoder):
 
     .. code-block::
 
-            >>> from pythae.models.nn.benchmarks.cifar import Encoder_Conv_SVAE_CIFAR
-            >>> from pythae.models import SVAEConfig
+            >>> from src.pythae.models.nn.benchmarks.cifar import Encoder_Conv_SVAE_CIFAR
+            >>> from src.pythae.models import SVAEConfig
             >>> model_config = SVAEConfig(input_dim=(3, 32, 32), latent_dim=16)
             >>> encoder = Encoder_Conv_SVAE_CIFAR(model_config)
             >>> encoder
@@ -358,7 +358,7 @@ class Encoder_Conv_SVAE_CIFAR(BaseEncoder):
 
     and then passed to a :class:`pythae.models` instance
 
-        >>> from pythae.models import SVAE
+        >>> from src.pythae.models import SVAE
         >>> model = SVAE(model_config=model_config, encoder=encoder)
         >>> model.encoder == encoder
         ... True
@@ -481,8 +481,8 @@ class Decoder_Conv_AE_CIFAR(BaseDecoder):
 
     .. code-block::
 
-            >>> from pythae.models.nn.benchmarks.cifar import Decoder_Conv_AE_CIFAR
-            >>> from pythae.models import VAEConfig
+            >>> from src.pythae.models.nn.benchmarks.cifar import Decoder_Conv_AE_CIFAR
+            >>> from src.pythae.models import VAEConfig
             >>> model_config = VAEConfig(input_dim=(3, 32, 32), latent_dim=16)
             >>> decoder = Decoder_Conv_AE_CIFAR(model_config)
             >>> decoder
@@ -509,7 +509,7 @@ class Decoder_Conv_AE_CIFAR(BaseDecoder):
 
     and then passed to a :class:`pythae.models` instance
 
-        >>> from pythae.models import VAE
+        >>> from src.pythae.models import VAE
         >>> model = VAE(model_config=model_config, decoder=decoder)
         >>> model.decoder == decoder
         ... True
@@ -621,8 +621,8 @@ class Discriminator_Conv_CIFAR(BaseDiscriminator):
 
     .. code-block::
 
-            >>> from pythae.models.nn.benchmarks.cifar import Discriminator_Conv_CIFAR
-            >>> from pythae.models import VAEGANConfig
+            >>> from src.pythae.models.nn.benchmarks.cifar import Discriminator_Conv_CIFAR
+            >>> from src.pythae.models import VAEGANConfig
             >>> model_config = VAEGANConfig(input_dim=(3, 32, 32), latent_dim=16)
             >>> discriminator = Discriminator_Conv_CIFAR(model_config)
             >>> discriminator
@@ -653,7 +653,7 @@ class Discriminator_Conv_CIFAR(BaseDiscriminator):
 
     and then passed to a :class:`pythae.models` instance
 
-        >>> from pythae.models import VAEGAN
+        >>> from src.pythae.models import VAEGAN
         >>> model = VAEGAN(model_config=model_config, discriminator=discriminator)
         >>> model.discriminator == discriminator
         ... True

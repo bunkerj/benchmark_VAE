@@ -49,8 +49,8 @@ Normal sampling
 
 .. code-block::
 
-    >>> from pythae.models import VAE
-    >>> from pythae.samplers import NormalSampler
+    >>> from src.pythae.models import VAE
+    >>> from src.pythae.samplers import NormalSampler
     >>> # Retrieve the trained model
     >>> my_trained_vae = VAE.load_from_folder(
     ...	    'path/to/your/trained/model'
@@ -72,8 +72,8 @@ Gaussian mixture sampling
 
 .. code-block::
 
-    >>> from pythae.models import VAE
-    >>> from pythae.samplers import GaussianMixtureSampler, GaussianMixtureSamplerConfig
+    >>> from src.pythae.models import VAE
+    >>> from src.pythae.samplers import GaussianMixtureSampler, GaussianMixtureSamplerConfig
     >>> # Retrieve the trained model
     >>> my_trained_vae = VAE.load_from_folder(
     ...	    'path/to/your/trained/model'

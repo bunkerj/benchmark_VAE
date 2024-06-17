@@ -4,9 +4,9 @@ import numpy as np
 import pytest
 import torch
 
-from pythae.models import AutoModel
-from pythae.models.base.base_utils import ModelOutput
-from pythae.models.normalizing_flows import MADE, MADEConfig
+from src.pythae.models import AutoModel
+from src.pythae.models.base.base_utils import ModelOutput
+from src.pythae.models.normalizing_flows import MADE, MADEConfig
 
 PATH = os.path.dirname(os.path.abspath(__file__))
 

@@ -4,8 +4,8 @@ import os
 
 import numpy as np
 
-from pythae.pipelines import TrainingPipeline
-from pythae.trainers import (
+from src.pythae.pipelines import TrainingPipeline
+from src.pythae.trainers import (
     AdversarialTrainerConfig,
     BaseTrainerConfig,
     CoupledOptimizerTrainerConfig,
@@ -102,46 +102,46 @@ def main(args):
 
         if args.nn == "convnet":
 
-            from pythae.models.nn.benchmarks.mnist import (
+            from src.pythae.models.nn.benchmarks.mnist import (
                 Decoder_Conv_AE_MNIST as Decoder_AE,
             )
-            from pythae.models.nn.benchmarks.mnist import (
+            from src.pythae.models.nn.benchmarks.mnist import (
                 Decoder_Conv_AE_MNIST as Decoder_VQVAE,
             )
-            from pythae.models.nn.benchmarks.mnist import (
+            from src.pythae.models.nn.benchmarks.mnist import (
                 Encoder_Conv_AE_MNIST as Encoder_AE,
             )
-            from pythae.models.nn.benchmarks.mnist import (
+            from src.pythae.models.nn.benchmarks.mnist import (
                 Encoder_Conv_AE_MNIST as Encoder_VQVAE,
             )
-            from pythae.models.nn.benchmarks.mnist import (
+            from src.pythae.models.nn.benchmarks.mnist import (
                 Encoder_Conv_SVAE_MNIST as Encoder_SVAE,
             )
-            from pythae.models.nn.benchmarks.mnist import (
+            from src.pythae.models.nn.benchmarks.mnist import (
                 Encoder_Conv_VAE_MNIST as Encoder_VAE,
             )
 
         elif args.nn == "resnet":
-            from pythae.models.nn.benchmarks.mnist import (
+            from src.pythae.models.nn.benchmarks.mnist import (
                 Encoder_ResNet_AE_MNIST as Encoder_AE,
             )
-            from pythae.models.nn.benchmarks.mnist import (
+            from src.pythae.models.nn.benchmarks.mnist import (
                 Encoder_ResNet_VAE_MNIST as Encoder_VAE,
             )
-            from pythae.models.nn.benchmarks.mnist import (
+            from src.pythae.models.nn.benchmarks.mnist import (
                 Encoder_ResNet_SVAE_MNIST as Encoder_SVAE,
             )
-            from pythae.models.nn.benchmarks.mnist import (
+            from src.pythae.models.nn.benchmarks.mnist import (
                 Encoder_ResNet_VQVAE_MNIST as Encoder_VQVAE,
             )
-            from pythae.models.nn.benchmarks.mnist import (
+            from src.pythae.models.nn.benchmarks.mnist import (
                 Decoder_ResNet_AE_MNIST as Decoder_AE,
             )
-            from pythae.models.nn.benchmarks.mnist import (
+            from src.pythae.models.nn.benchmarks.mnist import (
                 Decoder_ResNet_VQVAE_MNIST as Decoder_VQVAE,
             )
 
-        from pythae.models.nn.benchmarks.mnist import (
+        from src.pythae.models.nn.benchmarks.mnist import (
             Discriminator_Conv_MNIST as Discriminator,
         )
 
@@ -149,42 +149,42 @@ def main(args):
 
         if args.nn == "convnet":
 
-            from pythae.models.nn.benchmarks.cifar import (
+            from src.pythae.models.nn.benchmarks.cifar import (
                 Decoder_Conv_AE_CIFAR as Decoder_AE,
             )
-            from pythae.models.nn.benchmarks.cifar import (
+            from src.pythae.models.nn.benchmarks.cifar import (
                 Decoder_Conv_AE_CIFAR as Decoder_VQVAE,
             )
-            from pythae.models.nn.benchmarks.cifar import (
+            from src.pythae.models.nn.benchmarks.cifar import (
                 Encoder_Conv_AE_CIFAR as Encoder_AE,
             )
-            from pythae.models.nn.benchmarks.cifar import (
+            from src.pythae.models.nn.benchmarks.cifar import (
                 Encoder_Conv_AE_CIFAR as Encoder_VQVAE,
             )
-            from pythae.models.nn.benchmarks.cifar import (
+            from src.pythae.models.nn.benchmarks.cifar import (
                 Encoder_Conv_SVAE_CIFAR as Encoder_SVAE,
             )
-            from pythae.models.nn.benchmarks.cifar import (
+            from src.pythae.models.nn.benchmarks.cifar import (
                 Encoder_Conv_VAE_CIFAR as Encoder_VAE,
             )
 
         elif args.nn == "resnet":
-            from pythae.models.nn.benchmarks.cifar import (
+            from src.pythae.models.nn.benchmarks.cifar import (
                 Decoder_ResNet_AE_CIFAR as Decoder_AE,
             )
-            from pythae.models.nn.benchmarks.cifar import (
+            from src.pythae.models.nn.benchmarks.cifar import (
                 Decoder_ResNet_VQVAE_CIFAR as Decoder_VQVAE,
             )
-            from pythae.models.nn.benchmarks.cifar import (
+            from src.pythae.models.nn.benchmarks.cifar import (
                 Encoder_ResNet_AE_CIFAR as Encoder_AE,
             )
-            from pythae.models.nn.benchmarks.cifar import (
+            from src.pythae.models.nn.benchmarks.cifar import (
                 Encoder_ResNet_SVAE_CIFAR as Encoder_SVAE,
             )
-            from pythae.models.nn.benchmarks.cifar import (
+            from src.pythae.models.nn.benchmarks.cifar import (
                 Encoder_ResNet_VAE_CIFAR as Encoder_VAE,
             )
-            from pythae.models.nn.benchmarks.cifar import (
+            from src.pythae.models.nn.benchmarks.cifar import (
                 Encoder_ResNet_VQVAE_CIFAR as Encoder_VQVAE,
             )
 
@@ -192,42 +192,42 @@ def main(args):
 
         if args.nn == "convnet":
 
-            from pythae.models.nn.benchmarks.celeba import (
+            from src.pythae.models.nn.benchmarks.celeba import (
                 Decoder_Conv_AE_CELEBA as Decoder_AE,
             )
-            from pythae.models.nn.benchmarks.celeba import (
+            from src.pythae.models.nn.benchmarks.celeba import (
                 Decoder_Conv_AE_CELEBA as Decoder_VQVAE,
             )
-            from pythae.models.nn.benchmarks.celeba import (
+            from src.pythae.models.nn.benchmarks.celeba import (
                 Encoder_Conv_AE_CELEBA as Encoder_AE,
             )
-            from pythae.models.nn.benchmarks.celeba import (
+            from src.pythae.models.nn.benchmarks.celeba import (
                 Encoder_Conv_AE_CELEBA as Encoder_VQVAE,
             )
-            from pythae.models.nn.benchmarks.celeba import (
+            from src.pythae.models.nn.benchmarks.celeba import (
                 Encoder_Conv_SVAE_CELEBA as Encoder_SVAE,
             )
-            from pythae.models.nn.benchmarks.celeba import (
+            from src.pythae.models.nn.benchmarks.celeba import (
                 Encoder_Conv_VAE_CELEBA as Encoder_VAE,
             )
 
         elif args.nn == "resnet":
-            from pythae.models.nn.benchmarks.celeba import (
+            from src.pythae.models.nn.benchmarks.celeba import (
                 Decoder_ResNet_AE_CELEBA as Decoder_AE,
             )
-            from pythae.models.nn.benchmarks.celeba import (
+            from src.pythae.models.nn.benchmarks.celeba import (
                 Decoder_ResNet_VQVAE_CELEBA as Decoder_VQVAE,
             )
-            from pythae.models.nn.benchmarks.celeba import (
+            from src.pythae.models.nn.benchmarks.celeba import (
                 Encoder_ResNet_AE_CELEBA as Encoder_AE,
             )
-            from pythae.models.nn.benchmarks.celeba import (
+            from src.pythae.models.nn.benchmarks.celeba import (
                 Encoder_ResNet_SVAE_CELEBA as Encoder_SVAE,
             )
-            from pythae.models.nn.benchmarks.celeba import (
+            from src.pythae.models.nn.benchmarks.celeba import (
                 Encoder_ResNet_VAE_CELEBA as Encoder_VAE,
             )
-            from pythae.models.nn.benchmarks.celeba import (
+            from src.pythae.models.nn.benchmarks.celeba import (
                 Encoder_ResNet_VQVAE_CELEBA as Encoder_VQVAE,
             )
 
@@ -266,7 +266,7 @@ def main(args):
     data_input_dim = tuple(train_data.shape[1:])
 
     if args.model_name == "ae":
-        from pythae.models import AE, AEConfig
+        from src.pythae.models import AE, AEConfig
 
         if args.model_config is not None:
             model_config = AEConfig.from_json_file(args.model_config)
@@ -283,7 +283,7 @@ def main(args):
         )
 
     elif args.model_name == "vae":
-        from pythae.models import VAE, VAEConfig
+        from src.pythae.models import VAE, VAEConfig
 
         if args.model_config is not None:
             model_config = VAEConfig.from_json_file(args.model_config)
@@ -300,7 +300,7 @@ def main(args):
         )
 
     elif args.model_name == "iwae":
-        from pythae.models import IWAE, IWAEConfig
+        from src.pythae.models import IWAE, IWAEConfig
 
         if args.model_config is not None:
             model_config = IWAEConfig.from_json_file(args.model_config)
@@ -317,7 +317,7 @@ def main(args):
         )
 
     elif args.model_name == "info_vae":
-        from pythae.models import INFOVAE_MMD, INFOVAE_MMD_Config
+        from src.pythae.models import INFOVAE_MMD, INFOVAE_MMD_Config
 
         if args.model_config is not None:
             model_config = INFOVAE_MMD_Config.from_json_file(args.model_config)
@@ -334,7 +334,7 @@ def main(args):
         )
 
     elif args.model_name == "wae":
-        from pythae.models import WAE_MMD, WAE_MMD_Config
+        from src.pythae.models import WAE_MMD, WAE_MMD_Config
 
         if args.model_config is not None:
             model_config = WAE_MMD_Config.from_json_file(args.model_config)
@@ -351,7 +351,7 @@ def main(args):
         )
 
     elif args.model_name == "rae_l2":
-        from pythae.models import RAE_L2, RAE_L2_Config
+        from src.pythae.models import RAE_L2, RAE_L2_Config
 
         if args.model_config is not None:
             model_config = RAE_L2_Config.from_json_file(args.model_config)
@@ -368,7 +368,7 @@ def main(args):
         )
 
     elif args.model_name == "rae_gp":
-        from pythae.models import RAE_GP, RAE_GP_Config
+        from src.pythae.models import RAE_GP, RAE_GP_Config
 
         if args.model_config is not None:
             model_config = RAE_GP_Config.from_json_file(args.model_config)
@@ -385,7 +385,7 @@ def main(args):
         )
 
     elif args.model_name == "vamp":
-        from pythae.models import VAMP, VAMPConfig
+        from src.pythae.models import VAMP, VAMPConfig
 
         if args.model_config is not None:
             model_config = VAMPConfig.from_json_file(args.model_config)
@@ -402,7 +402,7 @@ def main(args):
         )
 
     elif args.model_name == "beta_vae":
-        from pythae.models import BetaVAE, BetaVAEConfig
+        from src.pythae.models import BetaVAE, BetaVAEConfig
 
         if args.model_config is not None:
             model_config = BetaVAEConfig.from_json_file(args.model_config)
@@ -419,7 +419,7 @@ def main(args):
         )
 
     elif args.model_name == "hvae":
-        from pythae.models import HVAE, HVAEConfig
+        from src.pythae.models import HVAE, HVAEConfig
 
         if args.model_config is not None:
             model_config = HVAEConfig.from_json_file(args.model_config)
@@ -436,7 +436,7 @@ def main(args):
         )
 
     elif args.model_name == "rhvae":
-        from pythae.models import RHVAE, RHVAEConfig
+        from src.pythae.models import RHVAE, RHVAEConfig
 
         if args.model_config is not None:
             model_config = RHVAEConfig.from_json_file(args.model_config)
@@ -453,7 +453,7 @@ def main(args):
         )
 
     elif args.model_name == "aae":
-        from pythae.models import Adversarial_AE, Adversarial_AE_Config
+        from src.pythae.models import Adversarial_AE, Adversarial_AE_Config
 
         if args.model_config is not None:
             model_config = Adversarial_AE_Config.from_json_file(args.model_config)
@@ -470,7 +470,7 @@ def main(args):
         )
 
     elif args.model_name == "vaegan":
-        from pythae.models import VAEGAN, VAEGANConfig
+        from src.pythae.models import VAEGAN, VAEGANConfig
 
         if args.model_config is not None:
             model_config = VAEGANConfig.from_json_file(args.model_config)
@@ -488,7 +488,7 @@ def main(args):
         )
 
     elif args.model_name == "vqvae":
-        from pythae.models import VQVAE, VQVAEConfig
+        from src.pythae.models import VQVAE, VQVAEConfig
 
         if args.model_config is not None:
             model_config = VQVAEConfig.from_json_file(args.model_config)
@@ -505,7 +505,7 @@ def main(args):
         )
 
     elif args.model_name == "msssim_vae":
-        from pythae.models import MSSSIM_VAE, MSSSIM_VAEConfig
+        from src.pythae.models import MSSSIM_VAE, MSSSIM_VAEConfig
 
         if args.model_config is not None:
             model_config = MSSSIM_VAEConfig.from_json_file(args.model_config)
@@ -522,7 +522,7 @@ def main(args):
         )
 
     elif args.model_name == "svae":
-        from pythae.models import SVAE, SVAEConfig
+        from src.pythae.models import SVAE, SVAEConfig
 
         if args.model_config is not None:
             model_config = SVAEConfig.from_json_file(args.model_config)
@@ -539,7 +539,7 @@ def main(args):
         )
 
     elif args.model_name == "disentangled_beta_vae":
-        from pythae.models import DisentangledBetaVAE, DisentangledBetaVAEConfig
+        from src.pythae.models import DisentangledBetaVAE, DisentangledBetaVAEConfig
 
         if args.model_config is not None:
             model_config = DisentangledBetaVAEConfig.from_json_file(args.model_config)
@@ -556,7 +556,7 @@ def main(args):
         )
 
     elif args.model_name == "factor_vae":
-        from pythae.models import FactorVAE, FactorVAEConfig
+        from src.pythae.models import FactorVAE, FactorVAEConfig
 
         if args.model_config is not None:
             model_config = FactorVAEConfig.from_json_file(args.model_config)
@@ -573,7 +573,7 @@ def main(args):
         )
 
     elif args.model_name == "beta_tc_vae":
-        from pythae.models import BetaTCVAE, BetaTCVAEConfig
+        from src.pythae.models import BetaTCVAE, BetaTCVAEConfig
 
         if args.model_config is not None:
             model_config = BetaTCVAEConfig.from_json_file(args.model_config)
@@ -590,7 +590,7 @@ def main(args):
         )
 
     elif args.model_name == "vae_iaf":
-        from pythae.models import VAE_IAF, VAE_IAF_Config
+        from src.pythae.models import VAE_IAF, VAE_IAF_Config
 
         if args.model_config is not None:
             model_config = VAE_IAF_Config.from_json_file(args.model_config)
@@ -607,7 +607,7 @@ def main(args):
         )
 
     elif args.model_name == "vae_lin_nf":
-        from pythae.models import VAE_LinNF, VAE_LinNF_Config
+        from src.pythae.models import VAE_LinNF, VAE_LinNF_Config
 
         if args.model_config is not None:
             model_config = VAE_LinNF_Config.from_json_file(args.model_config)
@@ -657,7 +657,7 @@ def main(args):
         training_config = AdversarialTrainerConfig.from_json_file(args.training_config)
 
     elif model.model_name == "VAEGAN":
-        from pythae.trainers import (
+        from src.pythae.trainers import (
             CoupledOptimizerAdversarialTrainer,
             CoupledOptimizerAdversarialTrainerConfig,
         )
@@ -674,7 +674,7 @@ def main(args):
     callbacks = []
 
     if args.use_wandb:
-        from pythae.trainers.training_callbacks import WandbCallback
+        from src.pythae.trainers.training_callbacks import WandbCallback
 
         wandb_cb = WandbCallback()
         wandb_cb.setup(

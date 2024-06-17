@@ -3,7 +3,7 @@ import os
 import pytest
 import torch
 
-from pythae.data.datasets import BaseDataset
+from src.pythae.data.datasets import BaseDataset
 
 PATH = os.path.dirname(os.path.abspath(__file__))
 

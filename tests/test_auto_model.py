@@ -2,7 +2,7 @@ import os
 
 import pytest
 
-from pythae.models import AutoModel
+from src.pythae.models import AutoModel
 
 PATH = os.path.dirname(os.path.abspath(__file__))
 

@@ -5,13 +5,13 @@ import pytest
 import torch
 from pydantic import ValidationError
 
-from pythae.customexception import BadInheritanceError
-from pythae.models import VQVAE, AutoModel, VQVAEConfig
-from pythae.models.base.base_utils import ModelOutput
-from pythae.models.vq_vae.vq_vae_utils import Quantizer, QuantizerEMA
-from pythae.pipelines import GenerationPipeline, TrainingPipeline
-from pythae.samplers import PixelCNNSamplerConfig
-from pythae.trainers import BaseTrainer, BaseTrainerConfig
+from src.pythae.customexception import BadInheritanceError
+from src.pythae.models import VQVAE, AutoModel, VQVAEConfig
+from src.pythae.models.base.base_utils import ModelOutput
+from src.pythae.models.vq_vae.vq_vae_utils import Quantizer, QuantizerEMA
+from src.pythae.pipelines import GenerationPipeline, TrainingPipeline
+from src.pythae.samplers import PixelCNNSamplerConfig
+from src.pythae.trainers import BaseTrainer, BaseTrainerConfig
 from tests.data.custom_architectures import (
     Decoder_AE_Conv,
     Encoder_AE_Conv,

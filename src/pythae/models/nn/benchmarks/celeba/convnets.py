@@ -5,7 +5,7 @@ from typing import List
 import torch
 import torch.nn as nn
 
-from pythae.models.nn import BaseDecoder, BaseDiscriminator, BaseEncoder
+from src.pythae.models.nn import BaseDecoder, BaseDiscriminator, BaseEncoder
 
 from ....base import BaseAEConfig
 from ....base.base_utils import ModelOutput
@@ -20,8 +20,8 @@ class Encoder_Conv_AE_CELEBA(BaseEncoder):
 
     .. code-block::
 
-            >>> from pythae.models.nn.benchmarks.celeba import Encoder_Conv_AE_CELEBA
-            >>> from pythae.models import AEConfig
+            >>> from src.pythae.models.nn.benchmarks.celeba import Encoder_Conv_AE_CELEBA
+            >>> from src.pythae.models import AEConfig
             >>> model_config = AEConfig(input_dim=(3, 64, 64), latent_dim=64)
             >>> encoder = Encoder_Conv_AE_CELEBA(model_config)
             >>> encoder
@@ -55,7 +55,7 @@ class Encoder_Conv_AE_CELEBA(BaseEncoder):
 
     and then passed to a :class:`pythae.models` instance
 
-        >>> from pythae.models import AE
+        >>> from src.pythae.models import AE
         >>> model = AE(model_config=model_config, encoder=encoder)
         >>> model.encoder == encoder
         ... True
@@ -168,8 +168,8 @@ class Encoder_Conv_VAE_CELEBA(BaseEncoder):
 
     .. code-block::
 
-            >>> from pythae.models.nn.benchmarks.celeba import Encoder_Conv_VAE_CELEBA
-            >>> from pythae.models import VAEConfig
+            >>> from src.pythae.models.nn.benchmarks.celeba import Encoder_Conv_VAE_CELEBA
+            >>> from src.pythae.models import VAEConfig
             >>> model_config = VAEConfig(input_dim=(3, 64, 64), latent_dim=64)
             >>> encoder = Encoder_Conv_VAE_CELEBA(model_config)
             >>> encoder
@@ -204,7 +204,7 @@ class Encoder_Conv_VAE_CELEBA(BaseEncoder):
 
     and then passed to a :class:`pythae.models` instance
 
-        >>> from pythae.models import VAE
+        >>> from src.pythae.models import VAE
         >>> model = VAE(model_config=model_config, encoder=encoder)
         >>> model.encoder == encoder
         ... True
@@ -326,8 +326,8 @@ class Encoder_Conv_SVAE_CELEBA(BaseEncoder):
 
     .. code-block::
 
-            >>> from pythae.models.nn.benchmarks.celeba import Encoder_Conv_SVAE_CELEBA
-            >>> from pythae.models import SVAEConfig
+            >>> from src.pythae.models.nn.benchmarks.celeba import Encoder_Conv_SVAE_CELEBA
+            >>> from src.pythae.models import SVAEConfig
             >>> model_config = SVAEConfig(input_dim=(3, 64, 64), latent_dim=64)
             >>> encoder = Encoder_Conv_SVAE_CELEBA(model_config)
             >>> encoder
@@ -362,7 +362,7 @@ class Encoder_Conv_SVAE_CELEBA(BaseEncoder):
 
     and then passed to a :class:`pythae.models` instance
 
-        >>> from pythae.models import SVAE
+        >>> from src.pythae.models import SVAE
         >>> model = SVAE(model_config=model_config, encoder=encoder)
         >>> model.encoder == encoder
         ... True
@@ -486,8 +486,8 @@ class Decoder_Conv_AE_CELEBA(BaseDecoder):
 
     .. code-block::
 
-            >>> from pythae.models.nn.benchmarks.celeba import Decoder_Conv_AE_CELEBA
-            >>> from pythae.models import VAEConfig
+            >>> from src.pythae.models.nn.benchmarks.celeba import Decoder_Conv_AE_CELEBA
+            >>> from src.pythae.models import VAEConfig
             >>> model_config = VAEConfig(input_dim=(3, 64, 64), latent_dim=64)
             >>> decoder = Decoder_Conv_AE_CELEBA(model_config)
             >>> decoder
@@ -521,7 +521,7 @@ class Decoder_Conv_AE_CELEBA(BaseDecoder):
 
     and then passed to a :class:`pythae.models` instance
 
-        >>> from pythae.models import VAE
+        >>> from src.pythae.models import VAE
         >>> model = VAE(model_config=model_config, decoder=decoder)
         >>> model.decoder == decoder
         ... True
@@ -640,8 +640,8 @@ class Discriminator_Conv_CELEBA(BaseDiscriminator):
 
     .. code-block::
 
-            >>> from pythae.models.nn.benchmarks.celeba import Discriminator_Conv_CELEBA
-            >>> from pythae.models import VAEGANConfig
+            >>> from src.pythae.models.nn.benchmarks.celeba import Discriminator_Conv_CELEBA
+            >>> from src.pythae.models import VAEGANConfig
             >>> model_config = VAEGANConfig(input_dim=(3, 64, 64), latent_dim=64)
             >>> discriminator = Discriminator_Conv_CELEBA(model_config)
             >>> discriminator
@@ -677,7 +677,7 @@ class Discriminator_Conv_CELEBA(BaseDiscriminator):
 
     and then passed to a :class:`pythae.models` instance
 
-        >>> from pythae.models import VAEGAN
+        >>> from src.pythae.models import VAEGAN
         >>> model = VAEGAN(model_config=model_config, discriminator=discriminator)
         >>> model.discriminator == discriminator
         ... True

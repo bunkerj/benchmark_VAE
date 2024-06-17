@@ -7,12 +7,12 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from pythae.data.preprocessors import DataProcessor
-from pythae.models import AutoModel, PoincareVAE, PoincareVAEConfig
-from pythae.models.base.base_utils import ModelOutput
-from pythae.models.nn import BaseDecoder, BaseEncoder
-from pythae.models.pvae.pvae_utils import PoincareBall
-from pythae.trainers import BaseTrainer, BaseTrainerConfig
+from src.pythae.data.preprocessors import DataProcessor
+from src.pythae.models import AutoModel, PoincareVAE, PoincareVAEConfig
+from src.pythae.models.base.base_utils import ModelOutput
+from src.pythae.models.nn import BaseDecoder, BaseEncoder
+from src.pythae.models.pvae.pvae_utils import PoincareBall
+from src.pythae.trainers import BaseTrainer, BaseTrainerConfig
 
 logger = logging.getLogger(__name__)
 console = logging.StreamHandler()

@@ -9,7 +9,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from pythae.models.base.base_utils import ModelOutput
+from src.pythae.models.base.base_utils import ModelOutput
 
 
 class MaskedLinear(nn.Linear):

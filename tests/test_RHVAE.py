@@ -4,18 +4,18 @@ from copy import deepcopy
 import pytest
 import torch
 
-from pythae.customexception import BadInheritanceError
-from pythae.models import RHVAE, AutoModel, RHVAEConfig
-from pythae.models.rhvae.rhvae_config import RHVAEConfig
-from pythae.pipelines import GenerationPipeline, TrainingPipeline
-from pythae.samplers import (
+from src.pythae.customexception import BadInheritanceError
+from src.pythae.models import RHVAE, AutoModel, RHVAEConfig
+from src.pythae.models.rhvae.rhvae_config import RHVAEConfig
+from src.pythae.pipelines import GenerationPipeline, TrainingPipeline
+from src.pythae.samplers import (
     GaussianMixtureSamplerConfig,
     IAFSamplerConfig,
     MAFSamplerConfig,
     NormalSamplerConfig,
     TwoStageVAESamplerConfig,
 )
-from pythae.trainers import BaseTrainer, BaseTrainerConfig
+from src.pythae.trainers import BaseTrainer, BaseTrainerConfig
 from tests.data.custom_architectures import (
     Decoder_AE_Conv,
     Encoder_VAE_Conv,
