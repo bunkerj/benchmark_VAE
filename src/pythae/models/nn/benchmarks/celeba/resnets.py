@@ -731,90 +731,10 @@ class Decoder_ResNet_AE_CELEBA(BaseDecoder):
         Returns:
             ModelOutput: An instance of ModelOutput containing the reconstruction of the latent code
             under the key `reconstruction`. Optional: The outputs of the layers specified in
-            `output_layer_levels` arguments are available under th    """
-    A ResNet decoder suited for CELEBA and Vector Quantized VAE models.
-
-    .. code-block::
-
-        >>> from src.pythae.models.nn.benchmarks.celeba import    """
-    A ResNet decoder suited for CELEBA and Vector Quantized VAE models.
-
-    .. code-block:: Decoder_ResNet_VQVAE_CELEBA
-        >>> from src.pythae.models import VQVAEConfig
-        >>> model_config = VQVAEConfig(input_dim=(3, 64, 64), latent_dim=16)
-        >>> decoder = Decoder_ResNet_VQVAE_CELEBA(model_config)
-        >>> decoder
-        ... Decoder_ResNet_VQVAE_CELEBA(
-        ...   (layers): ModuleList(
-        ...     (0): ConvTranspose2d(16, 128, kernel_size=(1, 1), stride=(1, 1))
-        ...     (1): ConvTranspose2d(128, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
-        ...     (2): Sequential(
-        ...       (0): ResBlock(
-        ...         (conv_block): Sequential(
-        ...           (0): ReLU()
-        ...           (1): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
-        ...           (2): ReLU()
-        ...           (3): Conv2d(32, 128, kernel_size=(1, 1), stride=(1, 1))
-        ...         )
-        ...       )
-        ...       (1): ResBlock(
-        ...         (conv_block): Sequential(
-        ...           (0): ReLU()
-        ...           (1): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
-        ...           (2): ReLU()
-        ...           (3): Conv2d(32, 128, kernel_size=(1, 1), stride=(1, 1))
-        ...         )
-        ...       )
-        ...       (2): ResBlock(
-        ...         (conv_block): Sequential(
-        ...           (0): ReLU()
-        ...           (1): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
-        ...           (2): ReLU()
-        ...           (3): Conv2d(32, 128, kernel_size=(1, 1), stride=(1, 1))
-        ...         )
-        ...       )
-        ...       (3): ResBlock(
-        ...         (conv_block): Sequential(
-        ...           (0): ReLU()
-        ...           (1): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
-        ...           (2): ReLU()
-        ...           (3): Conv2d(32, 128, kernel_size=(1, 1), stride=(1, 1))
-        ...         )
-        ...       )
-        ...     )
-        ...     (3): Sequential(
-        ...       (0): ConvTranspose2d(128, 128, kernel_size=(5, 5), stride=(2, 2), padding=(1, 1))
-        ...     )
-        ...     (4): Sequential(
-        ...       (0): ConvTranspose2d(128, 64, kernel_size=(5, 5), stride=(2, 2), padding=(1, 1), output_padding=(1, 1))
-        ...     )
-        ...     (5): Sequential(
-        ...       (0): ConvTranspose2d(64, 3, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))
-        ...       (1): Sigmoid()
-        ...     )
-        ...   )
-        ... )
-
-
-    and then passed to a :class:`pythae.models` instance
-
-        >>> from src.pythae.models import VQVAE
-        >>> model = VQVAE(model_config=model_config, decoder=decoder)
-        >>> model.decoder == decoder
-        ... True
-
-    .. note::
-
-        Please note that this decoder is suitable for **all** models.
-
-        .. code-block::
-
-            >>> import torch
-            >>> input = torch.randn(2, 16, 4, 4)
-            >>> out = decoder(input)
-            >>> out.reconstruction.shape
-            ... torch.Size([2, 3, 64, 64])
-    """
+            `output_layer_levels` arguments are available under the keys `reconstruction_layer_i`
+            where i is the layer's level.
+        """
+        output = ModelOutput()
 
         max_depth = self.depth
 
